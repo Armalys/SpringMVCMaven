@@ -4,7 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="musicBean"
-          class="ru.guzovskiy.springlesson.RockMusic">
+          class="ru.guzovskiy.springlesson.ClassicalMusic">
     </bean>
 
+    <bean id="musicPlayer"
+          class="ru.guzovskiy.springlesson.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
 </beans>
